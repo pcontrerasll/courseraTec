@@ -17,4 +17,5 @@ for i in serie{
     if i >= 30 && i <= 40 {
         print("\(i) Viva Swift!!!")
     }
+
 }
