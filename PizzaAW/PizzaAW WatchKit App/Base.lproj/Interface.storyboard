@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--sizeView-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="sizeView" id="AgC-eL-Hgc" customClass="SizeInterfaceController" customModule="PizzaAW_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Tamaño: " id="Gsu-iK-IlP">
+                            <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Ninguno" textAlignment="left" id="PKh-Qb-zd1">
+                            <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <slider width="1" alignment="left" continuous="YES" maximum="3" steps="3" id="wAh-ip-KS4">
+                            <color key="color" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="setSIze:" destination="AgC-eL-Hgc" id="y7C-Qw-xhx"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Siguiente" id="gku-Ia-NPZ">
+                            <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="aceptSize" destination="AgC-eL-Hgc" id="uSM-wt-d1R"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="sizeLabel" destination="PKh-Qb-zd1" id="cbi-IF-Iet"/>
+                        <outlet property="sliderSize" destination="wAh-ip-KS4" id="4Fq-fQ-qcr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="305" y="367"/>
+        </scene>
+        <!--StyleView-->
+        <scene sceneID="8hZ-tL-vlH">
+            <objects>
+                <controller identifier="StyleView" id="Mt0-T1-Uhg" customClass="StyleInterfaceController" customModule="PizzaAW_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Masa" id="dRt-vD-36U">
+                            <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <button width="1" height="26" alignment="left" title="Delgada" id="Ji5-78-mKz">
+                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="setSlim" destination="Mt0-T1-Uhg" id="dDa-6M-i3L"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="26" alignment="left" title="Gruesa" id="dbQ-z8-2c4">
+                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="setFat" destination="Mt0-T1-Uhg" id="Ic3-Bt-3p0"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="26" alignment="left" title="Crujiente" id="PJO-59-yuX">
+                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="setCrunchy" destination="Mt0-T1-Uhg" id="55q-yg-j7e"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Siguiente" id="YZl-8Q-8gp">
+                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="aceptStyle" destination="Mt0-T1-Uhg" id="Pv5-mY-Oxu"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="crunchyButton" destination="PJO-59-yuX" id="lgG-Rg-hhc"/>
+                        <outlet property="fatButton" destination="dbQ-z8-2c4" id="WQh-Am-QkV"/>
+                        <outlet property="slimButton" destination="Ji5-78-mKz" id="HHT-8X-qGt"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="500" y="367"/>
+        </scene>
+        <!--CheeseView-->
+        <scene sceneID="o1n-U2-L9d">
+            <objects>
+                <controller identifier="CheeseView" id="1zQ-ZV-xN0" customClass="CheseeInterfaceController" customModule="PizzaAW_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Queso" id="c9a-e4-Wre">
+                            <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <group width="1" alignment="left" id="9ih-rn-jqf">
+                            <items>
+                                <button width="65" height="40" alignment="left" title="Mozarela" id="HpC-uf-n2u">
+                                    <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="setMozarela" destination="1zQ-ZV-xN0" id="5mG-LK-qH2"/>
+                                    </connections>
+                                </button>
+                                <button width="65" height="40" alignment="left" title="Cheddar" id="3v2-V8-aKH">
+                                    <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="setCheddar" destination="1zQ-ZV-xN0" id="oO9-pH-5oJ"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="dIc-Az-iDD">
+                            <items>
+                                <button width="65" height="40" alignment="left" title="Parme-sano" id="lGN-pr-Vge">
+                                    <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="setParmesano" destination="1zQ-ZV-xN0" id="cyh-eX-gH7"/>
+                                    </connections>
+                                </button>
+                                <button width="65" height="40" alignment="left" title="Sin Queso" id="iBR-gr-ZDO">
+                                    <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="setNoCheese" destination="1zQ-ZV-xN0" id="Jzt-RP-Lmr"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Siguiente" id="4Rf-7Y-TA8">
+                            <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="setCheese" destination="1zQ-ZV-xN0" id="q8O-Js-Oma"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="cheddarButton" destination="3v2-V8-aKH" id="Sy7-nM-2Qb"/>
+                        <outlet property="mozarelaButton" destination="HpC-uf-n2u" id="xgV-6A-cIm"/>
+                        <outlet property="noChesseButton" destination="iBR-gr-ZDO" id="J5b-et-bTV"/>
+                        <outlet property="parmesanoButton" destination="lGN-pr-Vge" id="bQi-UF-iZw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="694" y="366"/>
+        </scene>
+        <!--IngredientsView-->
+        <scene sceneID="PZv-xB-B2Z">
+            <objects>
+                <controller identifier="IngredientsView" alwaysBounce="YES" id="Cn1-Tr-gac" customClass="IngredientInterfaceController" customModule="PizzaAW_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Ingredientes" id="0q7-WV-PfJ">
+                            <color key="textColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <table alignment="left" id="IbZ-ZW-jAi">
+                            <items>
+                                <tableRow identifier="IngredientTableRowController" id="LIw-kC-1FQ" customClass="IngredientTableRowController" customModule="PizzaAW_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="26" alignment="left" id="8Yw-1z-mLB">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="Wnf-Ih-M3Y">
+                                                <color key="textColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="groupIngredient" destination="8Yw-1z-mLB" id="fGF-Pv-98U"/>
+                                        <outlet property="ingredientName" destination="Wnf-Ih-M3Y" id="e8S-IA-FMN"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Siguiente" id="ndx-nh-Cpa">
+                            <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="setIngredients" destination="Cn1-Tr-gac" id="0QP-wH-pdR"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ingredientTable" destination="IbZ-ZW-jAi" id="mAP-BH-IYB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="871" y="369"/>
+        </scene>
+        <!--ConfirmationView-->
+        <scene sceneID="Nvi-UV-Qgb">
+            <objects>
+                <controller identifier="ConfirmationView" id="bUQ-Q1-FaD" customClass="ConfirmationInterfaceController" customModule="PizzaAW_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Confirmación" id="x3H-E2-1iK">
+                            <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Tamaño:" id="3rD-3n-mz5">
+                            <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="oBg-FD-hGV">
+                            <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <separator alignment="left" id="eSW-Zb-BEo"/>
+                        <label alignment="left" text="Masa:" id="4f7-Yb-wLP">
+                            <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="TKe-oh-QCc">
+                            <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <separator alignment="left" id="qdq-Dc-Mvx"/>
+                        <label alignment="left" text="Queso:" id="OV7-MS-C3F">
+                            <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="4jR-n0-OXk">
+                            <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <separator alignment="left" id="Eki-hc-3JM"/>
+                        <label alignment="left" text="Ingredientes:" id="dHR-aS-hkU">
+                            <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" numberOfLines="0" id="08P-73-zAS">
+                            <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <group width="1" alignment="left" id="cUA-VR-DpS">
+                            <items>
+                                <button width="65" alignment="left" title="Aceptar" id="ukz-vO-1Sp">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="confirmOrder" destination="bUQ-Q1-FaD" id="vEs-JO-avy"/>
+                                    </connections>
+                                </button>
+                                <button width="65" alignment="left" title="Cancelar" id="bE7-MJ-5gr">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="cancelOrder" destination="bUQ-Q1-FaD" id="oq2-eW-olA"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="cheeseLabel" destination="4jR-n0-OXk" id="nTz-KB-Nk9"/>
+                        <outlet property="ingredientesLabel" destination="08P-73-zAS" id="bcZ-gM-05S"/>
+                        <outlet property="sizeLabel" destination="oBg-FD-hGV" id="Xqy-q7-FXY"/>
+                        <outlet property="styleLabel" destination="TKe-oh-QCc" id="i4K-o9-lCj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1031" y="369"/>
+        </scene>
+        <!--messageAceptView-->
+        <scene sceneID="zxI-4B-aBf">
+            <objects>
+                <controller identifier="messageAceptView" id="5UE-Dd-G1b" customClass="AceptInterfaceController" customModule="PizzaAW_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Su orden ha sido enviada con exito" numberOfLines="0" id="zhw-Br-7if"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Nueva Orden" id="Z3a-Jc-MG4">
+                            <connections>
+                                <action selector="newOrder" destination="5UE-Dd-G1b" id="Qby-hs-1Co"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1192" y="367"/>
+        </scene>
+        <!--messageMissingView-->
+        <scene sceneID="6Gz-tA-00a">
+            <objects>
+                <controller identifier="messageMissingView" id="Hwk-Q4-br4" customClass="MissingInterfaceController" customModule="PizzaAW_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Su orden está incompleta, favor de elegir tamaño, masa, queso y por lo menos un ingrediente" numberOfLines="0" id="3xa-sf-NtA"/>
+                        <button width="1" alignment="left" title="Aceptar" id="cw3-ch-eBX">
+                            <connections>
+                                <action selector="reviewOrder" destination="Hwk-Q4-br4" id="OTW-BR-g5O"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1353" y="369.75"/>
+        </scene>
+    </scenes>
+</document>
