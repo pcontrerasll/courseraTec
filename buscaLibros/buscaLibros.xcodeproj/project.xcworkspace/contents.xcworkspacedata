@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PizzaAW.xcodeproj">
+      location = "self:buscaLibros.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="buscaLibros" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Ffd-EY-QLl">
+                                <rect key="frame" x="162" y="28" width="276" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="276" id="qE2-xT-1gb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="search"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="269-q8-8qV">
+                                <rect key="frame" x="251" y="66" width="99" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="MaR-Lt-bdi"/>
+                                </constraints>
+                                <state key="normal" title="Buscar"/>
+                                <connections>
+                                    <action selector="getInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FqP-5t-4uN"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5Y1-OT-czi">
+                                <rect key="frame" x="290" y="271" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iAK-eD-bUS">
+                                <rect key="frame" x="162" y="143" width="276" height="276"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iAK-eD-bUS" firstAttribute="trailing" secondItem="Ffd-EY-QLl" secondAttribute="trailing" id="4ZB-N7-Too"/>
+                            <constraint firstItem="269-q8-8qV" firstAttribute="centerX" secondItem="Ffd-EY-QLl" secondAttribute="centerX" id="9xu-pT-SET"/>
+                            <constraint firstItem="5Y1-OT-czi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hlv-DO-N5q"/>
+                            <constraint firstItem="269-q8-8qV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-219" id="LoO-DI-Evc"/>
+                            <constraint firstItem="Ffd-EY-QLl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-257" id="PQz-hi-hCR"/>
+                            <constraint firstItem="5Y1-OT-czi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-19" id="WdJ-ef-ARl"/>
+                            <constraint firstItem="Ffd-EY-QLl" firstAttribute="leading" secondItem="iAK-eD-bUS" secondAttribute="leading" id="bbC-Ap-o7A"/>
+                            <constraint firstItem="iAK-eD-bUS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-19" id="dBN-Bg-pnc"/>
+                            <constraint firstItem="iAK-eD-bUS" firstAttribute="top" secondItem="269-q8-8qV" secondAttribute="bottom" constant="47" id="dQ7-dH-dqY"/>
+                            <constraint firstItem="iAK-eD-bUS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="soN-6u-r0s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoBox" destination="iAK-eD-bUS" id="7BH-RM-Qgl"/>
+                        <outlet property="isbn" destination="Ffd-EY-QLl" id="JJ2-FH-ynD"/>
+                        <outlet property="procesando" destination="5Y1-OT-czi" id="cyC-Yv-BeB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="367"/>
+        </scene>
+    </scenes>
+</document>

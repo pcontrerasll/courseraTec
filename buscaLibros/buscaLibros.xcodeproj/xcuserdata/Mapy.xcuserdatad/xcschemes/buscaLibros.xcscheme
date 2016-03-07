@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C1E2E591C7432420024D00C"
-               BuildableName = "PizzaAW.app"
-               BlueprintName = "PizzaAW"
-               ReferencedContainer = "container:PizzaAW.xcodeproj">
+               BlueprintIdentifier = "3C716BE91C8D15F900B8C988"
+               BuildableName = "buscaLibros.app"
+               BlueprintName = "buscaLibros"
+               ReferencedContainer = "container:buscaLibros.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C1E2E591C7432420024D00C"
-            BuildableName = "PizzaAW.app"
-            BlueprintName = "PizzaAW"
-            ReferencedContainer = "container:PizzaAW.xcodeproj">
+            BlueprintIdentifier = "3C716BE91C8D15F900B8C988"
+            BuildableName = "buscaLibros.app"
+            BlueprintName = "buscaLibros"
+            ReferencedContainer = "container:buscaLibros.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C1E2E591C7432420024D00C"
-            BuildableName = "PizzaAW.app"
-            BlueprintName = "PizzaAW"
-            ReferencedContainer = "container:PizzaAW.xcodeproj">
+            BlueprintIdentifier = "3C716BE91C8D15F900B8C988"
+            BuildableName = "buscaLibros.app"
+            BlueprintName = "buscaLibros"
+            ReferencedContainer = "container:buscaLibros.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C1E2E591C7432420024D00C"
-            BuildableName = "PizzaAW.app"
-            BlueprintName = "PizzaAW"
-            ReferencedContainer = "container:PizzaAW.xcodeproj">
+            BlueprintIdentifier = "3C716BE91C8D15F900B8C988"
+            BuildableName = "buscaLibros.app"
+            BlueprintName = "buscaLibros"
+            ReferencedContainer = "container:buscaLibros.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
