@@ -11,8 +11,9 @@ import UIKit
 class ViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var isbn: UITextField!
-    @IBOutlet weak var infoBox: UITextView!
-    @IBOutlet weak var procesando: UIActivityIndicatorView!
+    @IBOutlet weak var titulo: UILabel!
+    @IBOutlet weak var autor: UILabel!
+    @IBOutlet weak var portada: UIImageView!
     
     
     let urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
@@ -27,56 +28,61 @@ class ViewController: UIViewController,UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func sincrono(urlMod: String) -> String{
-        let url = NSURL(string: urlMod)
-        let datos:NSData? = NSData(contentsOfURL: url!)
-        var text: NSString = "";
-        if let _ = datos {
-            text = NSString(data:datos!, encoding:  NSUTF8StringEncoding)!
-        } else {
-            // Envia error
-            text = "ERROR";
-        }
-        return String(text)
-    }
-    
-    func asincrono(urlMod: String) -> String{
-        let url = NSURL(string: urlMod)
-        let session = NSURLSession.sharedSession()
-        var texto: NSString = "";
-        let bloque = { (datos: NSData?, resp: NSURLResponse?, error : NSError?) -> Void in
-            texto = NSString(data: datos!, encoding: NSUTF8StringEncoding)!
-        }
-        let dt = session.dataTaskWithURL(url!, completionHandler:  bloque)
-        dt.resume()
-        return String(texto)
-    }
-
     func procesaRespuesta(){
-        infoBox.text = "";
-        procesando.startAnimating()
+        self.titulo.text = ""
+        self.autor.text = ""
+        self.portada.image = UIImage()
         self.view.endEditing(true)
         if isbn.text == "" {
             let alert = UIAlertController(title: "AGREGAR ISBN", message: "Debe agregar un ISBN para realizar la búsqueda de datos", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
-            var respuesta = sincrono(urls + isbn.text!)
-            if respuesta == "Optional({})" || respuesta == "{}" {
-                respuesta = "No se han encontrado datos"
-            } else if respuesta == "ERROR" {
-                respuesta = ""
+            let url = NSURL(string: urls + isbn.text!)
+            let datos:NSData? = NSData(contentsOfURL: url!)
+            if let _ = datos {
+                do {
+                    let json = try NSJSONSerialization.JSONObjectWithData(datos!, options: NSJSONReadingOptions.MutableLeaves)
+                    print(json.count)
+                    if(json.count != 0){
+                        let jsonDico = json as! NSDictionary
+                        let dicoISBN = jsonDico["ISBN:" + isbn.text!] as! NSDictionary
+                        self.titulo.text = dicoISBN["title"] as! NSString as String
+                        let dicoAuthors = dicoISBN["authors"] as! NSArray
+                        var autores: String = "";
+                        for item in dicoAuthors {
+                            print(item["name"])
+                            print(item["name"]!)
+                            let autor = item["name"]! as! String
+                            autores += autor + ", "
+                        }
+                        self.autor.text = autores
+                        if let _ = dicoISBN["cover"] {
+                            let dicoCover = dicoISBN["cover"] as! NSDictionary
+                            let urlPortadaS = dicoCover["large"]! as! NSString as String
+                            let urlPortada = NSURL(string: urlPortadaS)
+                            self.portada.image = UIImage(data: NSData(contentsOfURL: urlPortada!)!)
+                        } else {
+                            self.portada.image = UIImage()
+                        }
+                    } else {
+                        let alert = UIAlertController(title: "SIN RESULTADOS", message: "No se ha encontrado ningún libro para el código introducido, favor de verficar", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
+                } catch _ {
+                    print("ERROR?")
+                }
+            } else {
                 let alert = UIAlertController(title: "SIN CONEXIÓN", message: "No se ha podido conectar al sevidor, favor de intentar más tarde", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
             }
-            infoBox.text = respuesta
         }
-        procesando.stopAnimating()
     }
     
     @IBAction func getInfo(sender: AnyObject) {
-       procesaRespuesta()
+        procesaRespuesta()
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
