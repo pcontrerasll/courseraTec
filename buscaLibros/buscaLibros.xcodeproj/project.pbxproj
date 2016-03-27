@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		3C716BEE1C8D15FA00B8C988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C716BED1C8D15FA00B8C988 /* AppDelegate.swift */; };
-		3C716BF01C8D15FA00B8C988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C716BEF1C8D15FA00B8C988 /* ViewController.swift */; };
+		3C716BF01C8D15FA00B8C988 /* LibroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C716BEF1C8D15FA00B8C988 /* LibroViewController.swift */; };
 		3C716BF31C8D15FA00B8C988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C716BF11C8D15FA00B8C988 /* Main.storyboard */; };
 		3C716BF51C8D15FA00B8C988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C716BF41C8D15FA00B8C988 /* Assets.xcassets */; };
 		3C716BF81C8D15FA00B8C988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C716BF61C8D15FA00B8C988 /* LaunchScreen.storyboard */; };
+		3C9C1F881CA7608F00EADD0F /* LibroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C1F871CA7608F00EADD0F /* LibroTableViewController.swift */; };
+		3C9C1F8A1CA7613900EADD0F /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C1F891CA7613900EADD0F /* Libro.swift */; };
+		3CF678761CA7ADA0000A853F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF678751CA7ADA0000A853F /* MainViewController.swift */; };
+		3CF6787A1CA7C80F000A853F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF678791CA7C80F000A853F /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C716BEA1C8D15F900B8C988 /* buscaLibros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buscaLibros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C716BED1C8D15FA00B8C988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C716BEF1C8D15FA00B8C988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C716BEF1C8D15FA00B8C988 /* LibroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroViewController.swift; sourceTree = "<group>"; };
 		3C716BF21C8D15FA00B8C988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C716BF41C8D15FA00B8C988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C716BF71C8D15FA00B8C988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C716BF91C8D15FA00B8C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C9C1F871CA7608F00EADD0F /* LibroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibroTableViewController.swift; sourceTree = "<group>"; };
+		3C9C1F891CA7613900EADD0F /* Libro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
+		3CF678751CA7ADA0000A853F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3CF678791CA7C80F000A853F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				3C716BED1C8D15FA00B8C988 /* AppDelegate.swift */,
-				3C716BEF1C8D15FA00B8C988 /* ViewController.swift */,
+				3C716BEF1C8D15FA00B8C988 /* LibroViewController.swift */,
 				3C716BF11C8D15FA00B8C988 /* Main.storyboard */,
 				3C716BF41C8D15FA00B8C988 /* Assets.xcassets */,
 				3C716BF61C8D15FA00B8C988 /* LaunchScreen.storyboard */,
 				3C716BF91C8D15FA00B8C988 /* Info.plist */,
+				3C9C1F871CA7608F00EADD0F /* LibroTableViewController.swift */,
+				3C9C1F891CA7613900EADD0F /* Libro.swift */,
+				3CF678751CA7ADA0000A853F /* MainViewController.swift */,
+				3CF678791CA7C80F000A853F /* InfoViewController.swift */,
 			);
 			path = buscaLibros;
 			sourceTree = "<group>";
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C716BF01C8D15FA00B8C988 /* ViewController.swift in Sources */,
+				3C9C1F881CA7608F00EADD0F /* LibroTableViewController.swift in Sources */,
+				3C716BF01C8D15FA00B8C988 /* LibroViewController.swift in Sources */,
+				3C9C1F8A1CA7613900EADD0F /* Libro.swift in Sources */,
 				3C716BEE1C8D15FA00B8C988 /* AppDelegate.swift in Sources */,
+				3CF6787A1CA7C80F000A853F /* InfoViewController.swift in Sources */,
+				3CF678761CA7ADA0000A853F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +303,7 @@
 				3C716BFE1C8D15FA00B8C988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

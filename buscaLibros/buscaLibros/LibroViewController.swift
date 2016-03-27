@@ -8,26 +8,37 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITextFieldDelegate {
+class LibroViewController: UIViewController, UITextFieldDelegate {
+
+    var libros = Array<Libro>()
+    var libro = Libro()
+    
 
     @IBOutlet weak var isbn: UITextField!
     @IBOutlet weak var titulo: UILabel!
     @IBOutlet weak var autor: UILabel!
     @IBOutlet weak var portada: UIImageView!
     
+    @IBOutlet weak var buscar: UIButton!
+    @IBOutlet weak var guardar: UIBarButtonItem!
+    
+    
     
     let urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        isbn.delegate = self
+        isbn.text = ""
+        guardar.enabled = false
+        libro = Libro()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
     func procesaRespuesta(){
         self.titulo.text = ""
         self.autor.text = ""
@@ -39,32 +50,36 @@ class ViewController: UIViewController,UITextFieldDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
             let url = NSURL(string: urls + isbn.text!)
+            libro.isbn = isbn.text!
             let datos:NSData? = NSData(contentsOfURL: url!)
             if let _ = datos {
                 do {
                     let json = try NSJSONSerialization.JSONObjectWithData(datos!, options: NSJSONReadingOptions.MutableLeaves)
-                    print(json.count)
                     if(json.count != 0){
+                        buscar.enabled = false
                         let jsonDico = json as! NSDictionary
                         let dicoISBN = jsonDico["ISBN:" + isbn.text!] as! NSDictionary
                         self.titulo.text = dicoISBN["title"] as! NSString as String
+                        libro.titulo = dicoISBN["title"] as! NSString as String
                         let dicoAuthors = dicoISBN["authors"] as! NSArray
                         var autores: String = "";
                         for item in dicoAuthors {
-                            print(item["name"])
-                            print(item["name"]!)
                             let autor = item["name"]! as! String
                             autores += autor + ", "
                         }
+                        libro.autor = autores
                         self.autor.text = autores
                         if let _ = dicoISBN["cover"] {
                             let dicoCover = dicoISBN["cover"] as! NSDictionary
                             let urlPortadaS = dicoCover["large"]! as! NSString as String
                             let urlPortada = NSURL(string: urlPortadaS)
                             self.portada.image = UIImage(data: NSData(contentsOfURL: urlPortada!)!)
+                            libro.portada = urlPortadaS
                         } else {
                             self.portada.image = UIImage()
                         }
+                        libro.completo = true
+                        guardar.enabled = true
                     } else {
                         let alert = UIAlertController(title: "SIN RESULTADOS", message: "No se ha encontrado ningún libro para el código introducido, favor de verficar", preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
@@ -90,6 +105,15 @@ class ViewController: UIViewController,UITextFieldDelegate {
         return false
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let sigVista = segue.destinationViewController as! MainViewController
+        if libros.contains(libro) {
+            print("ya existe libro")
+        } else {
+            self.libros.append(libro)
+        }
+        sigVista.libros = self.libros
+    }
     
 }
 
