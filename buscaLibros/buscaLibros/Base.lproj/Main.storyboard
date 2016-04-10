@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -338,14 +339,15 @@
             <objects>
                 <tableViewController title="Libros" id="hZq-nw-6fP" customClass="LibroTableViewController" customModule="buscaLibros" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BIx-mn-e3r">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="libro" selectionStyle="default" indentationWidth="10" reuseIdentifier="libro" id="GYW-z6-8NI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GYW-z6-8NI" id="yE2-tw-tCx">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -380,6 +382,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Yek-zm-sIz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ljl-Fv-dM4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcn-CS-Lny">
@@ -567,27 +570,27 @@
                                         <exclude reference="FdC-13-p01"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="Xte-nS-n4D"/>
-                                        <exclude reference="ZLe-bs-bj2"/>
-                                        <exclude reference="ZRH-Mp-nVd"/>
-                                        <exclude reference="wUm-XM-tcx"/>
+                                        <exclude reference="4lD-xY-uFG"/>
+                                        <exclude reference="rhW-q4-jYy"/>
                                         <exclude reference="GJR-7L-mNU"/>
                                         <exclude reference="aCa-b7-BqE"/>
                                         <exclude reference="n5h-X2-E7x"/>
                                         <exclude reference="qtb-nh-Iq6"/>
-                                        <exclude reference="4lD-xY-uFG"/>
-                                        <exclude reference="rhW-q4-jYy"/>
-                                        <exclude reference="aDV-Je-Swb"/>
-                                        <exclude reference="kQf-pP-vIk"/>
-                                        <exclude reference="tGh-R6-H5e"/>
-                                        <exclude reference="Krg-4b-hFS"/>
-                                        <exclude reference="Mqv-Ms-Axc"/>
-                                        <exclude reference="td3-3Z-IsM"/>
                                         <exclude reference="1Ps-Wl-6FO"/>
                                         <exclude reference="8mj-N8-6aA"/>
                                         <exclude reference="Plu-xP-et0"/>
                                         <exclude reference="ik4-te-QHA"/>
                                         <exclude reference="qMw-G7-YnG"/>
+                                        <exclude reference="Xte-nS-n4D"/>
+                                        <exclude reference="ZLe-bs-bj2"/>
+                                        <exclude reference="ZRH-Mp-nVd"/>
+                                        <exclude reference="wUm-XM-tcx"/>
+                                        <exclude reference="Krg-4b-hFS"/>
+                                        <exclude reference="Mqv-Ms-Axc"/>
+                                        <exclude reference="td3-3Z-IsM"/>
+                                        <exclude reference="aDV-Je-Swb"/>
+                                        <exclude reference="kQf-pP-vIk"/>
+                                        <exclude reference="tGh-R6-H5e"/>
                                         <exclude reference="aLT-YH-pa2"/>
                                         <exclude reference="may-Ym-4Of"/>
                                     </mask>
@@ -603,27 +606,27 @@
                                         <include reference="FdC-13-p01"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="Xte-nS-n4D"/>
-                                        <include reference="ZLe-bs-bj2"/>
-                                        <include reference="ZRH-Mp-nVd"/>
-                                        <include reference="wUm-XM-tcx"/>
+                                        <include reference="4lD-xY-uFG"/>
+                                        <include reference="rhW-q4-jYy"/>
                                         <include reference="GJR-7L-mNU"/>
                                         <include reference="aCa-b7-BqE"/>
                                         <include reference="n5h-X2-E7x"/>
                                         <include reference="qtb-nh-Iq6"/>
-                                        <include reference="4lD-xY-uFG"/>
-                                        <include reference="rhW-q4-jYy"/>
-                                        <include reference="aDV-Je-Swb"/>
-                                        <include reference="kQf-pP-vIk"/>
-                                        <include reference="tGh-R6-H5e"/>
-                                        <include reference="Krg-4b-hFS"/>
-                                        <include reference="Mqv-Ms-Axc"/>
-                                        <include reference="td3-3Z-IsM"/>
                                         <include reference="1Ps-Wl-6FO"/>
                                         <include reference="8mj-N8-6aA"/>
                                         <include reference="Plu-xP-et0"/>
                                         <include reference="ik4-te-QHA"/>
                                         <include reference="qMw-G7-YnG"/>
+                                        <include reference="Xte-nS-n4D"/>
+                                        <include reference="ZLe-bs-bj2"/>
+                                        <include reference="ZRH-Mp-nVd"/>
+                                        <include reference="wUm-XM-tcx"/>
+                                        <include reference="Krg-4b-hFS"/>
+                                        <include reference="Mqv-Ms-Axc"/>
+                                        <include reference="td3-3Z-IsM"/>
+                                        <include reference="aDV-Je-Swb"/>
+                                        <include reference="kQf-pP-vIk"/>
+                                        <include reference="tGh-R6-H5e"/>
                                         <include reference="aLT-YH-pa2"/>
                                         <include reference="may-Ym-4Of"/>
                                     </mask>

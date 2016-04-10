@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C35F7C11CBAFAA60085A1CE /* buscaLibros.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C35F7BF1CBAFAA60085A1CE /* buscaLibros.xcdatamodeld */; };
 		3C716BEE1C8D15FA00B8C988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C716BED1C8D15FA00B8C988 /* AppDelegate.swift */; };
 		3C716BF01C8D15FA00B8C988 /* LibroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C716BEF1C8D15FA00B8C988 /* LibroViewController.swift */; };
 		3C716BF31C8D15FA00B8C988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C716BF11C8D15FA00B8C988 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C35F7C01CBAFAA60085A1CE /* buscaLibros.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = buscaLibros.xcdatamodel; sourceTree = "<group>"; };
 		3C716BEA1C8D15F900B8C988 /* buscaLibros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buscaLibros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C716BED1C8D15FA00B8C988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C716BEF1C8D15FA00B8C988 /* LibroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				3C9C1F891CA7613900EADD0F /* Libro.swift */,
 				3CF678751CA7ADA0000A853F /* MainViewController.swift */,
 				3CF678791CA7C80F000A853F /* InfoViewController.swift */,
+				3C35F7BF1CBAFAA60085A1CE /* buscaLibros.xcdatamodeld */,
 			);
 			path = buscaLibros;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				3C9C1F881CA7608F00EADD0F /* LibroTableViewController.swift in Sources */,
 				3C716BF01C8D15FA00B8C988 /* LibroViewController.swift in Sources */,
 				3C9C1F8A1CA7613900EADD0F /* Libro.swift in Sources */,
+				3C35F7C11CBAFAA60085A1CE /* buscaLibros.xcdatamodeld in Sources */,
 				3C716BEE1C8D15FA00B8C988 /* AppDelegate.swift in Sources */,
 				3CF6787A1CA7C80F000A853F /* InfoViewController.swift in Sources */,
 				3CF678761CA7ADA0000A853F /* MainViewController.swift in Sources */,
@@ -306,6 +310,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C35F7BF1CBAFAA60085A1CE /* buscaLibros.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C35F7C01CBAFAA60085A1CE /* buscaLibros.xcdatamodel */,
+			);
+			currentVersion = 3C35F7C01CBAFAA60085A1CE /* buscaLibros.xcdatamodel */;
+			path = buscaLibros.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3C716BE21C8D15F900B8C988 /* Project object */;
 }

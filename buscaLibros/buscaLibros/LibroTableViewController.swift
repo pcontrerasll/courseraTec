@@ -7,13 +7,36 @@
 //
 
 import UIKit
+import CoreData
 
 class LibroTableViewController: UITableViewController {
     
     var libros = Array<Libro>()
+    var contexto :NSManagedObjectContext? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let libroPeticion = NSEntityDescription.entityForName("Libro", inManagedObjectContext: self.contexto!)
+        let peticion = libroPeticion?.managedObjectModel.fetchRequestTemplateForName("getLibros")
+        do{
+            let librosEntidad = try self.contexto?.executeFetchRequest(peticion!)
+            for libroEntidad in librosEntidad! {
+                let libro = Libro()
+                libro.isbn = libroEntidad.valueForKey("isbn") as! String
+                libro.titulo = libroEntidad.valueForKey("titulo") as! String
+                libro.portada = libroEntidad.valueForKey("portada") as! String
+                let autores = libroEntidad.valueForKey("tiene") as! Set<NSObject>
+                libro.autores = autores
+                var autoresStr: String = ""
+                for autor in autores {
+                    autoresStr += autor.valueForKey("nombre") as! String + ","
+                }
+                libros.append(libro)
+            }
+        } catch {
+        
+        }
     }
 
     override func didReceiveMemoryWarning() {

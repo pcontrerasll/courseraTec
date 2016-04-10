@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class LibroViewController: UIViewController, UITextFieldDelegate {
 
     var libros = Array<Libro>()
     var libro = Libro()
     
+    var contexto :NSManagedObjectContext? = nil
 
     @IBOutlet weak var isbn: UITextField!
     @IBOutlet weak var titulo: UILabel!
@@ -27,6 +29,7 @@ class LibroViewController: UIViewController, UITextFieldDelegate {
     let urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
     
     override func viewDidLoad() {
+        contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         super.viewDidLoad()
         isbn.text = ""
         guardar.enabled = false
@@ -49,6 +52,30 @@ class LibroViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
+            let libroPeticion = NSEntityDescription.entityForName("Libro", inManagedObjectContext: self.contexto!)
+            let peticion = libroPeticion?.managedObjectModel.fetchRequestFromTemplateWithName("getLibro", substitutionVariables: ["isbn" : isbn.text!])
+            do {
+                let libroEntidad = try self.contexto?.executeFetchRequest(peticion!)
+                if libroEntidad?.count > 0 {
+                    let libroResultado = libroEntidad?.first
+                    self.titulo.text = libroResultado!.valueForKey("titulo") as? String
+                    let urlPortada = NSURL(string: (libroResultado!.valueForKey("portada") as? String)!)
+                    if urlPortada != nil {
+                        self.portada.image = UIImage(data: NSData(contentsOfURL: urlPortada!)!)
+                    } else {
+                        self.portada.image = UIImage()
+                    }
+                    let autores = libroResultado!.valueForKey("tiene") as! Set<NSObject>
+                    var autoresStr: String = ""
+                    for autor in autores {
+                        autoresStr += autor.valueForKey("nombre") as! String + ","
+                    }
+                    self.autor.text = autoresStr
+                    return
+                }
+            } catch {
+            
+            }
             let url = NSURL(string: urls + isbn.text!)
             libro.isbn = isbn.text!
             let datos:NSData? = NSData(contentsOfURL: url!)
@@ -65,6 +92,8 @@ class LibroViewController: UIViewController, UITextFieldDelegate {
                         var autores: String = "";
                         for item in dicoAuthors {
                             let autor = item["name"]! as! String
+                            let autorEntidad = NSEntityDescription.insertNewObjectForEntityForName("Autor", inManagedObjectContext: self.contexto!)
+                            autorEntidad.setValue(autor, forKey: "nombre")
                             autores += autor + ", "
                         }
                         libro.autor = autores
@@ -110,7 +139,20 @@ class LibroViewController: UIViewController, UITextFieldDelegate {
         if libros.contains(libro) {
             print("ya existe libro")
         } else {
-            self.libros.append(libro)
+            if(libro.completo) {
+                self.libros.append(libro)
+                let libroNuevo = NSEntityDescription.insertNewObjectForEntityForName("Libro", inManagedObjectContext: self.contexto!)
+                libroNuevo.setValue(libro.isbn, forKey: "isbn")
+                libroNuevo.setValue(libro.titulo, forKey: "titulo")
+                libroNuevo.setValue(libro.portada, forKey: "portada")
+                libroNuevo.setValue(libro.autores, forKey: "tiene")
+                do{
+                    try self.contexto?.save()
+                } catch {
+                    
+                }
+            }
+            
         }
         sigVista.libros = self.libros
     }

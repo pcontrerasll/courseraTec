@@ -13,6 +13,7 @@ class Libro: Equatable {
     var isbn: String = ""
     var titulo: String = ""
     var autor: String = ""
+    var autores = Set<NSObject>()
     var portada: String = ""
     var completo: Bool = false;
     
