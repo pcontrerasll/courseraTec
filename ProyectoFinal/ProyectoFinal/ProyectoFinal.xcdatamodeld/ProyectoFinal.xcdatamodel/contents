@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1605" minimumToolsVersion="Xcode 7.0">
+    <entity name="Coordenada" syncable="YES">
+        <attribute name="latitud" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitud" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="perteneceFin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ruta" inverseName="tieneFinal" inverseEntity="Ruta" syncable="YES"/>
+        <relationship name="perteneceInicio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ruta" inverseName="tieneInicio" inverseEntity="Ruta" syncable="YES"/>
+        <relationship name="pertenecePI" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PuntoInteres" inverseName="tiene" inverseEntity="PuntoInteres" syncable="YES"/>
+    </entity>
+    <entity name="PuntoInteres" syncable="YES">
+        <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pertenece" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ruta" inverseName="tiene" inverseEntity="Ruta" syncable="YES"/>
+        <relationship name="tiene" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordenada" inverseName="pertenecePI" inverseEntity="Coordenada" syncable="YES"/>
+    </entity>
+    <entity name="Ruta" syncable="YES">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tiene" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PuntoInteres" inverseName="pertenece" inverseEntity="PuntoInteres" syncable="YES"/>
+        <relationship name="tieneFinal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordenada" inverseName="perteneceFin" inverseEntity="Coordenada" syncable="YES"/>
+        <relationship name="tieneInicio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coordenada" inverseName="perteneceInicio" inverseEntity="Coordenada" syncable="YES"/>
+    </entity>
+    <fetchRequest name="getRutas" entity="Ruta"/>
+    <elements>
+        <element name="Coordenada" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="PuntoInteres" positionX="-54" positionY="9" width="128" height="105"/>
+        <element name="Ruta" positionX="-36" positionY="18" width="128" height="105"/>
+    </elements>
+</model>

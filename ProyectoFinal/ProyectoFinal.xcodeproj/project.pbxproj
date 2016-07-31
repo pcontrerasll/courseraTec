@@ -16,7 +16,30 @@
 		3C1D6AE71D35FDB4006843C0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1D6AE61D35FDB4006843C0 /* ExtensionDelegate.swift */; };
 		3C1D6AE91D35FDB4006843C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C1D6AE81D35FDB4006843C0 /* Assets.xcassets */; };
 		3C1D6AED1D35FDB4006843C0 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3C1D6AD31D35FDB4006843C0 /* Watch.app */; };
+		3C25BE0D1D4CA9A700A059D5 /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25BE081D4CA9A700A059D5 /* ARAnnotation.swift */; };
+		3C25BE0E1D4CA9A700A059D5 /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25BE091D4CA9A700A059D5 /* ARAnnotationView.swift */; };
+		3C25BE0F1D4CA9A700A059D5 /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25BE0A1D4CA9A700A059D5 /* ARConfiguration.swift */; };
+		3C25BE101D4CA9A700A059D5 /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25BE0B1D4CA9A700A059D5 /* ARTrackingManager.swift */; };
+		3C25BE111D4CA9A700A059D5 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25BE0C1D4CA9A700A059D5 /* ARViewController.swift */; };
+		3C25BE131D4CA9B300A059D5 /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25BE121D4CA9B300A059D5 /* DebugMapViewController.swift */; };
+		3C25BE181D4CA9CC00A059D5 /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C25BE141D4CA9CC00A059D5 /* DebugMapViewController.xib */; };
+		3C25BE191D4CA9CC00A059D5 /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C25BE151D4CA9CC00A059D5 /* hdar_close.png */; };
+		3C25BE1A1D4CA9CC00A059D5 /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C25BE161D4CA9CC00A059D5 /* hdar_close@2x.png */; };
+		3C25BE1B1D4CA9CC00A059D5 /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C25BE171D4CA9CC00A059D5 /* hdar_close@3x.png */; };
+		3C25BE1D1D4CA9D600A059D5 /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25BE1C1D4CA9D600A059D5 /* TestAnnotationView.swift */; };
+		3C69F3301D4C7BA000372262 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C69F32F1D4C7BA000372262 /* CoreLocation.framework */; };
+		3C69F3321D4C7BAF00372262 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C69F3311D4C7BAF00372262 /* CoreMotion.framework */; };
+		3C69F3341D4C7BBE00372262 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C69F3331D4C7BBE00372262 /* MapKit.framework */; };
+		3C69F3381D4C82CA00372262 /* RAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69F3371D4C82CA00372262 /* RAViewController.swift */; };
 		3C87FED01D35979B009CAF7A /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C87FECF1D35979B009CAF7A /* ImagePickerViewController.swift */; };
+		3C912C2C1D4B2FCC00C609D8 /* EventoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C912C2B1D4B2FCC00C609D8 /* EventoTableViewController.swift */; };
+		3C912C2E1D4B302800C609D8 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C912C2D1D4B302800C609D8 /* Evento.swift */; };
+		3C912C301D4B413A00C609D8 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C912C2F1D4B413A00C609D8 /* DetalleViewController.swift */; };
+		3C912C321D4B4A4D00C609D8 /* RutaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C912C311D4B4A4D00C609D8 /* RutaTableViewController.swift */; };
+		3CA6E03D1D49B7510062F719 /* ProyectoFinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6E03B1D49B7510062F719 /* ProyectoFinal.xcdatamodeld */; };
+		3CA6E03F1D49DA410062F719 /* Coordenada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6E03E1D49DA410062F719 /* Coordenada.swift */; };
+		3CA6E0411D49DA610062F719 /* PuntoInteres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6E0401D49DA610062F719 /* PuntoInteres.swift */; };
+		3CA6E0431D49DA720062F719 /* Ruta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6E0421D49DA720062F719 /* Ruta.swift */; };
 		3CBD64401D3453C8007F865D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD643F1D3453C8007F865D /* AppDelegate.swift */; };
 		3CBD64421D3453C8007F865D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD64411D3453C8007F865D /* FirstViewController.swift */; };
 		3CBD64441D3453C8007F865D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD64431D3453C8007F865D /* SecondViewController.swift */; };
@@ -81,7 +104,30 @@
 		3C1D6AEA1D35FDB4006843C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C1EFBB91D35C31500BC39DB /* ProyectoFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1EFBE61D35C88200BC39DB /* ProyectoFinal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProyectoFinal.entitlements; sourceTree = "<group>"; };
+		3C25BE081D4CA9A700A059D5 /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		3C25BE091D4CA9A700A059D5 /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		3C25BE0A1D4CA9A700A059D5 /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		3C25BE0B1D4CA9A700A059D5 /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		3C25BE0C1D4CA9A700A059D5 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		3C25BE121D4CA9B300A059D5 /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		3C25BE141D4CA9CC00A059D5 /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		3C25BE151D4CA9CC00A059D5 /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		3C25BE161D4CA9CC00A059D5 /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		3C25BE171D4CA9CC00A059D5 /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		3C25BE1C1D4CA9D600A059D5 /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAnnotationView.swift; sourceTree = "<group>"; };
+		3C69F32F1D4C7BA000372262 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3C69F3311D4C7BAF00372262 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3C69F3331D4C7BBE00372262 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3C69F3371D4C82CA00372262 /* RAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAViewController.swift; sourceTree = "<group>"; };
 		3C87FECF1D35979B009CAF7A /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		3C912C2B1D4B2FCC00C609D8 /* EventoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventoTableViewController.swift; sourceTree = "<group>"; };
+		3C912C2D1D4B302800C609D8 /* Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
+		3C912C2F1D4B413A00C609D8 /* DetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
+		3C912C311D4B4A4D00C609D8 /* RutaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RutaTableViewController.swift; sourceTree = "<group>"; };
+		3CA6E03C1D49B7510062F719 /* ProyectoFinal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProyectoFinal.xcdatamodel; sourceTree = "<group>"; };
+		3CA6E03E1D49DA410062F719 /* Coordenada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordenada.swift; sourceTree = "<group>"; };
+		3CA6E0401D49DA610062F719 /* PuntoInteres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuntoInteres.swift; sourceTree = "<group>"; };
+		3CA6E0421D49DA720062F719 /* Ruta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ruta.swift; sourceTree = "<group>"; };
 		3CBD643F1D3453C8007F865D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CBD64411D3453C8007F865D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		3CBD64431D3453C8007F865D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +149,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C69F3341D4C7BBE00372262 /* MapKit.framework in Frameworks */,
+				3C69F3321D4C7BAF00372262 /* CoreMotion.framework in Frameworks */,
+				3C69F3301D4C7BA000372262 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,9 +179,44 @@
 			path = "Watch Extension";
 			sourceTree = "<group>";
 		};
+		3CBD62181D4CA84600396195 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3C25BE081D4CA9A700A059D5 /* ARAnnotation.swift */,
+				3C25BE091D4CA9A700A059D5 /* ARAnnotationView.swift */,
+				3C25BE0A1D4CA9A700A059D5 /* ARConfiguration.swift */,
+				3C25BE0B1D4CA9A700A059D5 /* ARTrackingManager.swift */,
+				3C25BE0C1D4CA9A700A059D5 /* ARViewController.swift */,
+				3CBD62191D4CA85200396195 /* Debug */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		3CBD62191D4CA85200396195 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				3C25BE121D4CA9B300A059D5 /* DebugMapViewController.swift */,
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
+		3CBD621A1D4CA85900396195 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3C25BE141D4CA9CC00A059D5 /* DebugMapViewController.xib */,
+				3C25BE151D4CA9CC00A059D5 /* hdar_close.png */,
+				3C25BE161D4CA9CC00A059D5 /* hdar_close@2x.png */,
+				3C25BE171D4CA9CC00A059D5 /* hdar_close@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		3CBD64331D3453C8007F865D = {
 			isa = PBXGroup;
 			children = (
+				3C69F3331D4C7BBE00372262 /* MapKit.framework */,
+				3C69F3311D4C7BAF00372262 /* CoreMotion.framework */,
+				3C69F32F1D4C7BA000372262 /* CoreLocation.framework */,
 				3CBD643E1D3453C8007F865D /* ProyectoFinal */,
 				3C1EFBB91D35C31500BC39DB /* ProyectoFinal.app */,
 				3C1D6AD31D35FDB4006843C0 /* Watch.app */,
@@ -145,17 +229,29 @@
 		3CBD643E1D3453C8007F865D /* ProyectoFinal */ = {
 			isa = PBXGroup;
 			children = (
+				3C25BE1C1D4CA9D600A059D5 /* TestAnnotationView.swift */,
+				3CBD621A1D4CA85900396195 /* Resources */,
+				3CBD62181D4CA84600396195 /* Classes */,
+				3C69F3371D4C82CA00372262 /* RAViewController.swift */,
 				3C1EFBE61D35C88200BC39DB /* ProyectoFinal.entitlements */,
+				3C912C2F1D4B413A00C609D8 /* DetalleViewController.swift */,
 				3CBD643F1D3453C8007F865D /* AppDelegate.swift */,
+				3CA6E03B1D49B7510062F719 /* ProyectoFinal.xcdatamodeld */,
 				3CBD64411D3453C8007F865D /* FirstViewController.swift */,
 				3CBD64431D3453C8007F865D /* SecondViewController.swift */,
 				3CBD64451D3453C8007F865D /* Main.storyboard */,
+				3C912C311D4B4A4D00C609D8 /* RutaTableViewController.swift */,
 				3CBD64481D3453C8007F865D /* Assets.xcassets */,
 				3CBD644A1D3453C8007F865D /* LaunchScreen.storyboard */,
 				3CBD644D1D3453C8007F865D /* Info.plist */,
 				3C87FECF1D35979B009CAF7A /* ImagePickerViewController.swift */,
 				3C1D6ACD1D35F0C6006843C0 /* DetalleQRViewController.swift */,
 				3C1D6ACF1D35F614006843C0 /* QRNavigationController.swift */,
+				3CA6E03E1D49DA410062F719 /* Coordenada.swift */,
+				3CA6E0401D49DA610062F719 /* PuntoInteres.swift */,
+				3CA6E0421D49DA720062F719 /* Ruta.swift */,
+				3C912C2B1D4B2FCC00C609D8 /* EventoTableViewController.swift */,
+				3C912C2D1D4B302800C609D8 /* Evento.swift */,
 			);
 			path = ProyectoFinal;
 			sourceTree = "<group>";
@@ -291,8 +387,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CBD644C1D3453C8007F865D /* LaunchScreen.storyboard in Resources */,
+				3C25BE191D4CA9CC00A059D5 /* hdar_close.png in Resources */,
+				3C25BE1B1D4CA9CC00A059D5 /* hdar_close@3x.png in Resources */,
 				3CBD64491D3453C8007F865D /* Assets.xcassets in Resources */,
 				3CBD64471D3453C8007F865D /* Main.storyboard in Resources */,
+				3C25BE1A1D4CA9CC00A059D5 /* hdar_close@2x.png in Resources */,
+				3C25BE181D4CA9CC00A059D5 /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,12 +412,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C912C2E1D4B302800C609D8 /* Evento.swift in Sources */,
+				3C25BE131D4CA9B300A059D5 /* DebugMapViewController.swift in Sources */,
+				3CA6E0411D49DA610062F719 /* PuntoInteres.swift in Sources */,
 				3CBD64441D3453C8007F865D /* SecondViewController.swift in Sources */,
 				3C1D6ACE1D35F0C6006843C0 /* DetalleQRViewController.swift in Sources */,
+				3C25BE1D1D4CA9D600A059D5 /* TestAnnotationView.swift in Sources */,
+				3C912C301D4B413A00C609D8 /* DetalleViewController.swift in Sources */,
 				3CBD64401D3453C8007F865D /* AppDelegate.swift in Sources */,
+				3CA6E03F1D49DA410062F719 /* Coordenada.swift in Sources */,
+				3C25BE0F1D4CA9A700A059D5 /* ARConfiguration.swift in Sources */,
+				3C912C321D4B4A4D00C609D8 /* RutaTableViewController.swift in Sources */,
+				3C912C2C1D4B2FCC00C609D8 /* EventoTableViewController.swift in Sources */,
+				3C25BE0E1D4CA9A700A059D5 /* ARAnnotationView.swift in Sources */,
+				3CA6E0431D49DA720062F719 /* Ruta.swift in Sources */,
 				3C87FED01D35979B009CAF7A /* ImagePickerViewController.swift in Sources */,
+				3C25BE0D1D4CA9A700A059D5 /* ARAnnotation.swift in Sources */,
+				3CA6E03D1D49B7510062F719 /* ProyectoFinal.xcdatamodeld in Sources */,
+				3C25BE101D4CA9A700A059D5 /* ARTrackingManager.swift in Sources */,
 				3C1D6AD01D35F614006843C0 /* QRNavigationController.swift in Sources */,
+				3C69F3381D4C82CA00372262 /* RAViewController.swift in Sources */,
 				3CBD64421D3453C8007F865D /* FirstViewController.swift in Sources */,
+				3C25BE111D4CA9A700A059D5 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +667,7 @@
 				3C1D6AF11D35FDB4006843C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C1D6AF41D35FDB4006843C0 /* Build configuration list for PBXNativeTarget "Watch" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +676,7 @@
 				3C1D6AEF1D35FDB4006843C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CBD64371D3453C8007F865D /* Build configuration list for PBXProject "ProyectoFinal" */ = {
 			isa = XCConfigurationList;
@@ -579,6 +697,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3CA6E03B1D49B7510062F719 /* ProyectoFinal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3CA6E03C1D49B7510062F719 /* ProyectoFinal.xcdatamodel */,
+			);
+			currentVersion = 3CA6E03C1D49B7510062F719 /* ProyectoFinal.xcdatamodel */;
+			path = ProyectoFinal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3CBD64341D3453C8007F865D /* Project object */;
 }

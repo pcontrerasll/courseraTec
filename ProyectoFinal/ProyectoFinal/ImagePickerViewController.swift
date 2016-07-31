@@ -79,6 +79,15 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
                 let firstViewController = stack[stack.count-2] as! FirstViewController
                 firstViewController.myLocations.append(locationCoordinate)
                 firstViewController.putPin(pinInt)
+                
+                let coordenada = Coordenada()
+                coordenada.latitud = Double(locationCoordinate.latitude)
+                coordenada.longitud = Double(locationCoordinate.longitude)
+                let puntoInteres = PuntoInteres()
+                puntoInteres.nombre = pinInt.name!
+                puntoInteres.coordenada = coordenada
+                puntoInteres.imagen = self.imageView.image!
+                firstViewController.ruta!.puntosInteres.append(puntoInteres)
             }
             
         }))
