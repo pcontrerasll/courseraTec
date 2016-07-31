@@ -77,10 +77,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = true
-    }
     
     func locationManager(manager: CLLocationManager , didChangeAuthorizationStatus status: CLAuthorizationStatus){
         if status == .AuthorizedWhenInUse{
